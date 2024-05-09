@@ -18,7 +18,7 @@ int	*ft_range(int min, int max)
 		return (NULL);
 	}
 	i = 0;
-	while (max > min)
+	while (min <= max)
 	{
 		result[i] = min;
 		min++;
