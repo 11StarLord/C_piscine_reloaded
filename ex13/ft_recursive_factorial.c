@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djoao <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 09:21:05 by djoao             #+#    #+#             */
-/*   Updated: 2024/05/10 09:21:10 by djoao            ###   ########.fr       */
+/*   Created: 2024/05/06 11:07:01 by djoao             #+#    #+#             */
+/*   Updated: 2024/05/06 11:08:15 by djoao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_ft(int *nbr);
+int	ft_recursive_factorial(int nb);
 
-void	ft_ft(int *nbr)
+int	ft_recursive_factorial(int nb)
 {
-	*nbr = 42;
+	if (nb < 0)
+		return (0);
+	if (nb == 0 || nb == 1)
+		return (1);
+	return (nb * ft_recursive_factorial(nb - 1));
 }

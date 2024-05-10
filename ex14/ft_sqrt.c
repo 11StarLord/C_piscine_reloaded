@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djoao <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 09:21:05 by djoao             #+#    #+#             */
-/*   Updated: 2024/05/10 09:21:10 by djoao            ###   ########.fr       */
+/*   Created: 2024/05/06 11:28:56 by djoao             #+#    #+#             */
+/*   Updated: 2024/05/06 11:29:26 by djoao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_ft(int *nbr);
+int	ft_sqrt(int nb);
 
-void	ft_ft(int *nbr)
+int	ft_sqrt(int nb)
 {
-	*nbr = 42;
+	int	result;
+
+	result = 1;
+	if (nb < 0)
+		return (0);
+	while (result * result <= nb && result <= 46340)
+	{
+		if (result * result == nb)
+			return (result);
+		result++;
+	}
+	return (0);
 }

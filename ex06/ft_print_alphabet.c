@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djoao <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 09:21:05 by djoao             #+#    #+#             */
-/*   Updated: 2024/05/10 09:21:10 by djoao            ###   ########.fr       */
+/*   Created: 2024/05/03 11:25:51 by djoao             #+#    #+#             */
+/*   Updated: 2024/05/03 11:28:16 by djoao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_ft(int *nbr);
+void	ft_print_alphabet(void);
 
-void	ft_ft(int *nbr)
+void	ft_print_alphabet(void)
 {
-	*nbr = 42;
+	char	c;
+
+	c = 'a';
+	while (c <= 'z')
+	{
+		ft_putchar(c);
+		c++;
+	}
 }

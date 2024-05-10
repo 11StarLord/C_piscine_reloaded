@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djoao <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 09:21:05 by djoao             #+#    #+#             */
-/*   Updated: 2024/05/10 09:21:10 by djoao            ###   ########.fr       */
+/*   Created: 2024/05/06 09:19:38 by djoao             #+#    #+#             */
+/*   Updated: 2024/05/06 09:20:24 by djoao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_ft(int *nbr);
-
-void	ft_ft(int *nbr)
+int	ft_iterative_factorial(int nb)
 {
-	*nbr = 42;
+	int	result;
+
+	result = 1;
+	if (nb < 0)
+		result = 0;
+	while (nb > 1)
+	{
+		result = result * nb--;
+	}
+	return (result);
 }
